@@ -1,9 +1,10 @@
 """SQLAlchemy database initialization."""
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+from sqlalchemy.orm import Session, sessionmaker
 
 from app.core.config import settings
+from app.models.base import Base
 
 
 engine = create_engine(
@@ -17,9 +18,3 @@ SessionLocal = sessionmaker(
     autoflush=False,
     expire_on_commit=False,
 )
-
-
-class Base(DeclarativeBase):
-    """Base class for future SQLAlchemy models."""
-
-    pass
