@@ -1,0 +1,9 @@
+# Alembic Migrations
+
+This directory contains the Alembic migration environment for the MindX DevOps Lab backend.
+
+- `env.py` defines how Alembic runs migrations.
+- `script.py.mako` is the template for generated revisions.
+- `versions/` contains versioned migration scripts.
+
+Database credentials are provided through the application environment and are not stored in migration files or `alembic.ini`.
